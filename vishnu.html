@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy 21st Birthday!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lora&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Kalam', cursive;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    /* Warning strip styles */
+    .warning-strip {
+      font-family: 'Arial Black', sans-serif;
+      background-color: yellow;
+      color: black;
+      padding: 0.5rem;
+      font-size: 1rem;
+      text-align: center;
+      font-weight: bold;
+      position: fixed;
+      width: 100%;
+      z-index: 10000;
+      animation: scroll-strip 15s linear infinite;
+    }
+    .warning-strip.top {
+      top: 0;
+    }
+    .warning-strip.bottom {
+      bottom: 0;
+    }
+    @keyframes scroll-strip {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .access-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .access-form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      color: #333;
+    }
+
+    .access-form input[type="password"] {
+      padding: 0.5rem;
+      width: 200px;
+      margin-top: 1rem;
+    }
+
+    .access-form button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #4682B4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .overlay {
+      background-color: rgba(0, 100, 0, 0.45);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(0, 100, 0, 0.45);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Lora', serif;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .section h2 {
+      font-family: 'Lora', serif;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .section p {
+      text-align: justify;
+      font-family: 'Kalam', cursive;
+    }
+
+    .image-marquee {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: scroll 20s linear infinite;
+    }
+
+    .image-marquee img {
+      width: 200px;
+      height: 200px;
+      margin-right: 1rem;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    .image-marquee + p {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .final-note {
+      margin-top: 3rem;
+      background-color: rgba(255, 250, 205, 0.95);
+      padding: 1.5rem;
+      border-radius: 12px;
+      font-family: 'Kalam', cursive;
+      color: #333;
+      text-align: justify;
+    }
+
+    .from-note {
+      font-family: 'Lora', serif;
+      text-align: right;
+      font-style: italic;
+    }
+
+    /* Unlock animation */
+    #content {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top warning strip -->
+  <div class="warning-strip top">⚠ To the Mr. Nature/Travel Lover ⚠</div>
+
+  <!-- Lock screen -->
+  <div class="access-overlay" id="accessOverlay">
+    <div class="access-form">
+      <h2>Enter Access Code</h2>
+      <input type="password" id="passwordInput" placeholder="Password">
+      <br>
+      <button onclick="checkPassword()">Enter</button>
+      <p id="errorMessage" style="color:red;"></p>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="overlay" id="content" style="display: none;">
+    <div class="container">
+      <h1>Hellloooo Mister Dramebaaz!! 👋</h1>
+      <h2 style="text-align:center; font-family: 'Lora';">Happpppyyy 21st birthday Mr. Vishnu Prasad</h2>
+
+      <div class="section">
+        <h2>Cheers to the most sentimental, caring, sweet but overthinking guy!</h2>
+        <p>So Mr. We all know neevu full on senti mansha antha, so let's not act like we are unaware of it. And I think that u need to own it very clearly and stop being insecure about it or question urself for being so caring and say that you are being possessive or so, maybe u can not go a step further but that doesn't mean u step completely back by detaching yourselves too. <br>Own yourselves sir, you're a great person</p>
+      </div>
+
+      <div class="section">
+        <h2>Hii again.. Mr foodie Mr Anime buff and theeeeee Journal King</h2>
+        <p>Be it the chaotic classroom noise, breakup phase without even proposing to the girl u like or having real good mood, the best part is when you sit and finish chapters on chapters of your animes that are in your to finish list, cherry on the cake would be the bandi tindi, jalandhar street uta, the indian sweet house tuesday offers with that huge bahubali dish, the schezwan dragon treat or any real good food. That shine in ur eyes could be seen when you finally finish writing all those moments; heartbreaking, crazy, happy or goofy in ur journal.</p>
+      </div>
+
+      <div class="section">
+        <h2>Faces you thought drifted 🙂</h2>
+        <div class="image-marquee">
+          <img src="image1.jpg" alt="Face 1">
+          <img src="image2.jpg" alt="Face 2">
+          <img src="image3.jpg" alt="Face 3">
+        </div>
+        <p><em>the familiar closest faces for you—but you feel like you are an alien there, closely look at it and make sure you are right about it, if not go back to them 🙂</em></p>
+      </div>
+
+      <div class="final-note">
+        <p>All the best for all your dreams, I can see you putting efforts everyday, keep growing! Birthdays aren't about cakes and candles-they are about the stories, memories and the people who always remember you. similarly friends aren't about sharing happy moments and goofiness-they are about always being there but them being humans can make mistakes as well, hope you always remember this "forgive and forget" line and move on in life. But this doesn't mean I can't say; some people make you feel at home in a world that constantly moves—you're one of them and you're the first, pleaseeeee never forget that</p>
+        <p class="from-note">- from your friend :)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom warning strip -->
+  <div class="warning-strip bottom">⚠ To the Mr. Nature/Travel Lover ⚠</div>
+
+  <!-- One Piece music -->
+  <audio id="birthdayAudio" autoplay loop>
+    <source src="https://files.catbox.moe/8ozlrs.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      const error = document.getElementById('errorMessage');
+      if (input === 'Dramebaaz12@21') {
+        document.getElementById('accessOverlay').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('birthdayAudio').play();
+      } else {
+        error.textContent = 'Incorrect password. Try again!';
+      }
+    }
+  </script>
+</body>
+</html>
